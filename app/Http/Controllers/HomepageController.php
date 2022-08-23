@@ -14,4 +14,22 @@ class HomepageController extends Controller
 
         return view('homepage.index', $data);
     }
+
+    public function about()
+    {
+        $data = array(
+            'title' => 'Tentang Kami'
+        );
+
+        return view('homepage.about', $data);
+    }
+
+    public function kontak()
+    {
+        $data = array(
+            'title' => 'Kontak Kami'
+        );
+
+        return view('homepage.kontak', $data);
+    }
 }
