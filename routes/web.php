@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\LatihanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomepageController::class, 'index']);
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/halo', function () {
+//     return "Halo World";
+// });
+
+// Route::get('/latihan', [LatihanController::class, 'index']);
+
+// Route::get('/blog/{id}', [LatihanController::class, 'blog']);
+
+// Route::get('/blog/{idblog}/komentar/{idkomentar}', [LatihanController::class, 'komentar']);
+
+// Route::get('/beranda', [LatihanController::class, 'beranda']);
